@@ -319,13 +319,13 @@ html {
 .row-skill {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaço entre os cards */
+    gap: 10px; /* Espaço entre os cards */
   }
   
   .col-md-7 {
     display: flex;
-    flex: 1 1 calc(50% - 20px); /* Dois cards por linha em telas maiores */
-    max-width: calc(50% - 20px);
+    flex: 1 1 calc(50% - 10px); /* Dois cards por linha em telas maiores */
+    max-width: calc(50% - 10px);
   }
   
   .service-item {
@@ -333,7 +333,7 @@ html {
     flex-direction: column;
     justify-content: space-between;
     background-color: #f8f9fa; /* Cor de fundo exemplo */
-    padding: 20px;
+    padding: 5px;
     border-radius: 8px;
     height: 100%;
   }
@@ -347,15 +347,6 @@ html {
   }
   
   
-  /* Media Query para Mobile */
-  @media (max-width: 768px) {
-    .col-md-7 {
-      flex: 1 1 100%; /* Um card por linha em telas menores */
-      max-width: 100%;
-    }
-  }
- 
-
 /* Buttons */
 
 .white-button a {
