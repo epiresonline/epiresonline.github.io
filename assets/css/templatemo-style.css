@@ -156,20 +156,29 @@ html {
     margin-top: 60px;
 }
 
+.menu .social-network ul {
+    display: flex; /* Garante alinhamento flexbox entre os quadrados */
+    justify-content: center; /* Centraliza os quadrados horizontalmente */
+    padding: 0;
+    list-style: none; /* Remove os marcadores da lista */
+}
+
 .menu .social-network ul li {
-    margin: 0 3px;
+    margin: 0 15px;
 }
 
 .menu .social-network ul li a {
     width: 40px;
     height: 40px;
-    display: inline-block;
-    text-align: center;
-    line-height: 40px;
+    display: flex; /* Habilita flexbox dentro do link */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    align-items: center; /* Centraliza o ícone verticalmente */
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 14px;
+    font-size: 18px; /* Aumenta o tamanho do ícone (se necessário) */
+    border-radius: 5px; /* Arredonda os cantos */
     transition: all 0.5s;
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 .menu .social-network ul li a:hover {
