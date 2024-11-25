@@ -186,6 +186,19 @@ html {
     color: #007BFF;
 }
 
+  
+  .social-icons li {
+    display: flex; /* Habilita flexbox para centralizar os ícones */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 50px; /* Largura do quadrado */
+    height: 50px; /* Altura do quadrado */
+    background-color: #dddddd00; /* Cor de fundo do quadrado (pode alterar) */
+    border-radius: 5px; /* Deixa os cantos arredondados */
+  }
+
+
+
 .menu .copyright-text {
     position: relative;
     margin-top: 60px;
