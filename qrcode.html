@@ -20,6 +20,16 @@
             border-radius: 5px;
             display: none;
         }
+        #error-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 0, 0, 0.7); /* Fundo vermelho para erro */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +84,7 @@
     </div>
 
     <div id="toast">Link copiado!</div>
+    <div id="error-toast">Por favor, insira um texto ou link válido.</div>
     
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -81,10 +92,16 @@
     <script>
         function gerarQRCode() {
             let texto = document.getElementById("texto").value;
+
             if (texto.trim() === "") {
-                alert("Por favor, insira um texto ou link válido.");
+                let errorToast = document.getElementById("error-toast");
+                errorToast.style.display = "block";
+                setTimeout(() => {
+                    errorToast.style.display = "none";
+                }, 2000);
                 return;
             }
+
             document.getElementById("qrcode").innerHTML = "";
             new QRCode(document.getElementById("qrcode"), texto);
             
